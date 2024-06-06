@@ -1,0 +1,366 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    position: relative;
+}
+
+.dataPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    width: 100%;
+    height: 12vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 2vw;
+    border-bottom: 1px solid gray;
+}
+
+.createNew{
+    text-decoration: underline;
+    font-size: 18px;
+    font-family: serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+    cursor: pointer;
+}
+
+.familySection{
+    width: 100%;
+    height: calc(100vh - 12vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5vw;
+}
+
+.membersCont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 1px solid gray;
+}
+
+.memberBox{
+    width: 300px;
+    height: 200px;
+    margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: serif;
+    font-size: 25px;
+    color: black;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.withYellowBg{
+    background: yellow;
+}
+
+.pop-up-FormCont{
+    position: absolute;
+    right: 0;
+    top: -1000px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out .9s;
+}
+
+/* .topClass{
+    top: -1000px;
+} */
+
+.containerVisible{
+    /* animation: changeTop 2s ease-in-out .2s; */
+    top: 0;
+}
+
+@keyframes changeTop {
+    20%{
+        top: -800px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    40%{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        top: -600px;
+    }
+    60%{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        top: -400px;
+    }
+    80%{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        top: -200px;
+    }
+    60%{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 20px 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+    }
+}
+
+.formHeading{
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: serif;
+    margin: 15px 0;
+    text-transform: capitalize;
+    color: #ffff00;
+}
+
+.pop-up-Form{
+    width: 40%;
+    height: 300px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+}
+
+.nameInput{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.ageRange{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.submitButton{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    font-family: serif;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* STARTING RECOMENDATION STYLING */
+.recommendationBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.recommendationCont{
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border: 1px solid gray;
+    position: relative;
+}
+
+.recommendationHeader{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 5vw;
+    background: #ffff00;
+}
+
+.recommendationHeading{
+    color: #808080;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-family: serif;
+}
+
+.recommendationBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10vw;
+}
+
+.introductoryMsg{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: 600;
+}
+
+.listCont{
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listSmallCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    align-items: start;
+    justify-content: center;
+    border-radius: 15px;
+    list-style: none;
+}
+
+.listHeading{
+    font-weight: bolder;
+    font-family: serif;
+    font-size: 20px;
+}
+
+.consideredNutrients{
+    list-style: none;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px 0;
+}
+
+.recommendation{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    align-items: start;
+    justify-content: center;
+    border-radius: 15px;
+    list-style: none;
+    height: 150px;
+    width: 300px;
+}
+
+.recommendation .listHeading{
+    margin-bottom: 10px;
+}
+
+.didyouknow{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.backBtnContainer{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.backBtn{
+    width: 20%;
+    height: 55px;
+    border-radius: 15px;
+    background: #ffff00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+}

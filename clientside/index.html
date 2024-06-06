@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Select user</title>
+</head>
+<body>
+    <div class="dataPage">
+        <section class="familySection">
+            <aside class="membersCont">
+                <div class="memberBox withYellowBg" id="Sunil">Sunil</div>
+                <div class="memberBox withYellowBg" id="Rhiana">Rhiana</div>
+                <div class="memberBox"></div>
+                <div class="memberBox withYellowBg" id="Jaine">Jaine</div>
+                <div class="memberBox withYellowBg" id="Elaine">Elaine</div>
+                <div class="memberBox withYellowBg" id="Simon">Simon</div>
+            </aside>
+        </section>
+        <section class="pop-up-FormCont topClass" id="formCont">
+            <h1 class="formHeading">Add a new family Member</h1>
+            <form action="/addMemberToHouse" method="post" class="pop-up-Form">
+                <input type="text" placeholder="let know your name" name="name" class="nameInput">
+                <select name="ageRange" id="ageRange" title="selectage" class="ageRange">
+                    <option value="9 to 14">9 to 14</option>
+                    <option value="15 to 18">15 to 18</option>
+                    <option value="19 to 24">19 to 24</option>
+                </select>
+                <input type="submit" value="Add Member" class="submitButton">
+            </form>
+        </section>
+    </div>
+    <section class="recommendationBody hidden">
+        <div class="recommendationCont">
+            <header class="recommendationHeader">
+                <h1 class="recommendationHeading">your recommendation data</h1>
+            </header>
+            <section class="recommendationBox">
+                <p class="introductoryMsg">We've analyse your body nutrient based on the urine we were able to detect on the
+                    censor</p>
+                <div class="listCont">
+                    <div class="listSmallCont">
+                        <h4 class="listHeading">Improvement Needed on</h4>
+                        <ul class="consideredNutrients">
+                            <li class="nutient">Calcium</li>
+                            <li class="nutient">Sodium</li>
+                            <li class="nutient">Potassium</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation">
+                        <h4 class="listHeading">We recommend you start eating:</h4>
+                        <p id="recommededFood"></p>
+                    </div>
+                </div>
+            </section>
+            <div class="backBtnContainer">
+                <button class="backBtn">go back</button>
+            </div>
+        </div>
+    </section>
+
+    <script  src="./script.js" type="module"></script>
+    <!-- <script src="./membersJson.js" type="module"></script> -->
+</body>
+</html>
